@@ -1,6 +1,7 @@
 from django import forms
 from .models import Product
 
+# Se crea un formulario para mostrar
 class ProductForm(forms.Form):
     name = forms.CharField(max_length = 200, label = 'Nombre')
     description = forms.CharField(max_length = 500, label = 'Descripción')
