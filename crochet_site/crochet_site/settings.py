@@ -38,7 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    #Apps de Librerias
+    'crispy_forms',
+    'crispy_tailwind',
+    
+    #Apps Propias
     'products',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +134,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
+CRISPY_TEMPLATE_PACK = 'tailwind'
+
+# Después de que se cree el usuario, con esto le podemos decir a donde queremos que lo lleve
+LOGIN_REDIRECT_URL = 'list_product'
